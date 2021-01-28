@@ -1,0 +1,15 @@
+Alex
+Smith
+45
+qwerty@mail.com
+alex
+pass
+USER
+
+Mike
+Collins
+50
+admin@mail.com
+mike
+admpass
+ADMIN
