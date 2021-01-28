@@ -21,15 +21,14 @@ public abstract class MotherUser {
 
     @Override
     public String toString() {
-        return "MotherUser{" +
-                "name='" + name + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", age=" + age +
-                ", mail='" + mail + '\'' +
-                ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
-                ", role='" + role + '\'' +
-                '}';
+        return
+                name + '\n' +
+                        lastname + '\n' +
+                        age + '\n' +
+                        mail + '\n' +
+                        login + '\n' +
+                        password + '\n' +
+                        role + '\n' + '\n';
     }
 
     public abstract boolean isAdmin();

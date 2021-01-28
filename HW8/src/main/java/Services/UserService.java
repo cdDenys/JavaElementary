@@ -1,5 +1,7 @@
 package Services;
 
+import Entity.MotherUser;
+
 import java.io.FileWriter;
 
 public class UserService implements AdminPanel {
@@ -9,7 +11,7 @@ public class UserService implements AdminPanel {
     }
 
     @Override
-    public String getLog() {
-        return "Not available for user";
+    public void getLog(MotherUser usr) {
+        System.out.println("Not available for user");
     }
 }

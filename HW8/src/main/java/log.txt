@@ -1,0 +1,17 @@
+
+alex
+smith
+45
+asd@mail.com
+adm
+adm
+ADMIN
+
+alex
+smith
+45
+asd@mail.com
+adm
+adm
+USER
+

@@ -13,9 +13,11 @@ public class AdminService implements AdminPanel {
     }
 
     @Override
-    public String getLog() throws Exception {
-        FileWriter fw = new FileWriter("C:\\Users\\denis\\Desktop\\Hillel\\Elementary\\src\\main\\java\\log.txt");
-        return null;
+    public void getLog(MotherUser usr) throws Exception {
+        FileWriter fw = new FileWriter("C:\\Users\\denis\\Desktop\\Hillel\\Elementary\\src\\main\\java\\log.txt", true);
+        fw.write(usr.toString());
+        fw.close();
+        System.out.println(usr.toString());
     }
 
 }

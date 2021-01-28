@@ -1,8 +1,10 @@
 package Services;
 
+import Entity.MotherUser;
+
 import java.io.IOException;
 
 public interface AdminPanel {
     boolean isAdmin();
-    String getLog() throws IOException, Exception;
+    void getLog(MotherUser usr) throws IOException, Exception;
 }
