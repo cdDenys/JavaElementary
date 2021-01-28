@@ -3,34 +3,37 @@ import Entity.MotherUser;
 import Entity.User;
 import Services.AdminService;
 import Services.UserService;
-
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
-    private static MotherUser motherUser;
-
     public static void main(String[] args) throws Exception {
-//        FileReader fr = new FileReader("C:\\Users\\denis\\Desktop\\Hillel\\Elementary\\src\\main\\java\\users.txt");
-//        Scanner scan = new Scanner(fr);
-//        String user = "";
-//        while (scan.hasNextLine()) {
-//            user = scan.nextLine();
-//            System.out.println(user);
-//        }
-//        fr.close();
+        MotherUser user = new User("Vasia", "Pupkin", 45,
+                "user@mail.com", "qwerty", "asdfg");
+        MotherUser admin = new Admin("Alex", "Collins", 50,
+                "admin@mail.com", "qwerty", "asdfg");
+        while (true) {
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Chose the option:" + "\n" +
+                    "1 - Check user" + "\n" +
+                    "2 - Write user" + "\n" +
+                    "3 - exit");
+            int num = scan.nextInt();
+            if (num == 1) {
+                new AdminService().isExist(admin);
+                new UserService().isExist(user);
+            } else if (num == 2) {
+                new UserService().writeLog(user);
+                new UserService().writeLog(admin);
+                new AdminService().writeLog(admin);
+                new AdminService().writeLog(user);
+            } else if (num == 3) {
+                break;
+            } else {
+                System.out.println("Chose from 1 to 3");
+            }
+        }
 
-        MotherUser user1 = new Admin("alex", "smith", 45, "asd@mail.com", "adm", "adm", "ADMIN");
-        AdminService service = new AdminService();
-        UserService userService = new UserService();
-        service.getLog(user1);
-
-        MotherUser user2 = new User("alex", "smith", 45, "asd@mail.com", "adm", "adm", "USER");
-        service.getLog(user2);
-        userService.getLog(user2);
 
     }
 }

@@ -1,10 +1,24 @@
 package Services;
 
 import Entity.MotherUser;
-
-import java.io.IOException;
+import java.io.FileReader;
+import java.util.Scanner;
 
 public interface AdminPanel {
-    boolean isAdmin();
-    void getLog(MotherUser usr) throws IOException, Exception;
+    void writeLog(MotherUser usr) throws Exception;
+
+    default void isExist(MotherUser motherUser) throws Exception {
+        FileReader fileReader = new FileReader("C:\\Users\\denis\\Desktop\\Hillel\\Elementary\\src\\main\\java\\data");
+        Scanner scan = new Scanner(fileReader);
+        boolean check = false;
+        while (scan.hasNextLine()) {
+            if (motherUser.getMail().equals(scan.nextLine())) {
+                 check = true;
+            }
+        }
+        fileReader.close();
+        System.out.println(check);
+        System.out.println(motherUser.getMail());
+    }
+
 }

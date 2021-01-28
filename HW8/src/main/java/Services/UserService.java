@@ -2,16 +2,14 @@ package Services;
 
 import Entity.MotherUser;
 
-import java.io.FileWriter;
-
 public class UserService implements AdminPanel {
-    @Override
-    public boolean isAdmin() {
-        return false;
+
+    public UserService() {
     }
 
     @Override
-    public void getLog(MotherUser usr) {
+    public void writeLog(MotherUser usr) {
         System.out.println("Not available for user");
     }
+
 }
