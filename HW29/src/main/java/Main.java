@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 public class Main {
     public static void main(String[] args) {
 //      Task1
-        Stream.of()
+        Stream.empty()
                 .sorted()
                 .distinct()
                 .collect(Collectors.toCollection(ArrayList::new))
